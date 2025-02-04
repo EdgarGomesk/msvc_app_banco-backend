@@ -18,7 +18,9 @@
 
     <modules>
         <module>msvc-clientes</module>
+        <module>transaction</module>
     </modules>
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
