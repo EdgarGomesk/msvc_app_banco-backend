@@ -19,6 +19,7 @@
     <modules>
         <module>msvc-clientes</module>
         <module>transaction</module>
+        <module>msvc-products</module>
     </modules>
 
 
