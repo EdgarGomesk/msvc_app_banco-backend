@@ -1,5 +1,6 @@
 package org.gomes.springcloud.controller;
 
+import jakarta.validation.Valid;
 import org.gomes.springcloud.entity.Transaction;
 import org.gomes.springcloud.service.TransactionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class TransactionController {
     private TransactionServiceImpl transactionService;
 
     @PostMapping("/save")
-    public ResponseEntity<String> createTransaction(@RequestBody Transaction transaction) {
+    public ResponseEntity<String> createTransaction(@Valid @RequestBody Transaction transaction) {
         transactionService.createTransaction(transaction);
         return ResponseEntity.status(HttpStatus.CREATED).body("Transaction successfully created");
     }
